@@ -4,105 +4,148 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FIVE Dating</title>
-  <!-- Bootstrap CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fffefc;
+      color: #1f1f1f;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+    }
+    .navbar-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: #da4167;
+    }
+    a.nav-link:hover, a.nav-link.active {
+      color: #da4167;
+    }
+    .hero-section {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url('assets/images/DNA_strand.jpg') no-repeat center center / cover;
+      color: white;
+    }
+    .card {
+      border: none;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.03);
+    }
+    .card-img-top {
+      object-fit: cover;
+      height: 280px;
+    }
+    .bg-soft-pink {
+      background-color: #fff3f7;
+    }
+    .section-heading {
+      margin-bottom: 2rem;
+    }
+    .icon-check {
+      color: #da4167;
+      margin-right: 0.5rem;
+    }
+    .centered-content {
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    .check-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1rem;
+      margin-left: 5rem;
+      margin-right: auto;
+      text-align: left;
+      padding-top: 3rem;
+    }
+    .check-list-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      font-size: 1.1rem;
+    }
+    .check-list-item i {
+      color: #28a745;
+      margin-top: 0.2rem;
+    }
+  </style>
 </head>
 <body>
-  <!-- Navigation Bar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
     <div class="container">
       <a class="navbar-brand" href="#">FIVE Dating</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#consultants">Consultants</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#services">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#team">Meet Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="#how">How it Works</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Home Section with Background Image (Updated) -->
-  <section id="home" class="py-5 text-center" style="background-image: url('assets/images/DNA_strand.jpg'); background-size: cover; background-position: center;">
-    <div class="container py-5">
-      <h1 class="py-5" style="color: white;">FIVE Dating</h1>
-      <p class="lead" style="color: white;">Are the apps not working? Maybe you're unlovable</p>
-      <p class="lead" style="color: white;">Or maybe it's time to swipe IRL</p>
+  <section id="home" class="hero-section d-flex align-items-center justify-content-center text-center">
+    <div class="container">
+      <h1 class="display-4 fw-bold">FIVE Dating</h1>
+      <p class="lead">Are the apps not working? Maybe you're unlovable.</p>
+      <p class="lead">Or maybe it's time to swipe IRL.</p>
+      <a href="#services" class="btn btn-light btn-lg mt-4">Explore Events</a>
     </div>
   </section>
 
-  <!-- Consultants Section -->
-  <section id="consultants" class="py-5">
+  <section id="team" class="py-5">
     <div class="container">
-      <h2 class="text-center mb-4">Our Consultants</h2>
-      <div class="row">
-        <!-- Consultant 1 -->
+      <h2 class="text-center section-heading">Meet Your Hosts</h2>
+      <div class="row g-4">
         <div class="col-md-3">
-          <div class="card mb-3">
-            <img src="assets/images/ian.jpg" class="card-img-top" alt="Ian Coleman" />
+          <div class="card text-center">
+            <img src="assets/images/ian.jpg" class="card-img-top" alt="Ian">
             <div class="card-body">
               <h5 class="card-title">Ian Coleman</h5>
-              <ul class="list-unstyled">
-                <li>Regulatory Compliance</li>
-                <li>Dating</li>
-                <li>Hosting</li>
-              </ul>
+              <p class="card-text">Compliance • Dating • Hosting</p>
             </div>
           </div>
         </div>
-        <!-- Consultant 2 -->
         <div class="col-md-3">
-          <div class="card mb-3">
-            <img src="assets/images/freya.jpg" class="card-img-top" alt="Freya" />
+          <div class="card text-center">
+            <img src="assets/images/freya.jpg" class="card-img-top" alt="Freya">
             <div class="card-body">
               <h5 class="card-title">Freya</h5>
-              <ul class="list-unstyled">
-                <li>Romance</li>
-                <li>Compassion</li>
-                <li>Skeletons</li>
-              </ul>
+              <p class="card-text">Romance • Compassion • Skeletons</p>
             </div>
           </div>
         </div>
-        <!-- Consultant 3 -->
         <div class="col-md-3">
-          <div class="card mb-3">
+          <div class="card text-center">
             <img src="assets/images/ellie.jpg" class="card-img-top" alt="Ellie">
             <div class="card-body">
               <h5 class="card-title">Ellie</h5>
-              <ul class="list-unstyled">
-                <li>Soulmates</li>
-                <li>Psychology</li>
-                <li>Project Management</li>
-              </ul>
+              <p class="card-text">Soulmates • Psychology • PM</p>
             </div>
           </div>
         </div>
-        <!-- Consultant 4 -->
         <div class="col-md-3">
-          <div class="card mb-3">
-            <img src="assets/images/vlad.jpg" class="card-img-top" alt="Consultant 4">
+          <div class="card text-center">
+            <img src="assets/images/vlad.jpg" class="card-img-top" alt="Vlad">
             <div class="card-body">
               <h5 class="card-title">Vlad</h5>
-              <ul class="list-unstyled">
-                <li>Relationships</li>
-                <li>Security</li>
-                <li>Panache</li>
-              </ul>
+              <p class="card-text">Security • Relationships • Panache</p>
             </div>
           </div>
         </div>
@@ -110,60 +153,48 @@
     </div>
   </section>
 
-  <!-- Services Section -->
-  <section id="services" class="py-5 bg-light text-center">
-    <div class="container">
-      <h2 class="mb-4">Our Services</h2>
-      <p class="lead">Our team of Galway-based event managers has got your back</p>
-      <ol class="lead list-unstyled">
-        <li>Speed Dating</li>
-        <li>Singles Events</li>
-        <li>Collective Volunteering</li>
-        <li>Not Being on Apps</li>
-        <li>Not Crying Into Your Tea While on Apps</li>
-        <li>No D**k Pics</li>
-        <li>Maybe some Duck Pics</li>
-        <li>Supportive, Safe Environments</li>
-        <li>Qualified, Attuned Hosts</li>
-        <li>No Love Guru Bullsh*t</li>
-        <li>No Manosphere</li>
-        <li>Romance, Romance, Romance</li>
-        <li>Quality, Bespoke Events</li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- Experience Section -->
-  <section id="experience" class="py-5 bg-light text-center" style="background-image: url('https://drive.google.com/uc?export=view&id=189wY3_LlyU7ZWGU-i6PitEhfGuphWewS'); background-size: cover; background-position: center;">
-    <div class="py-5 container">
-      <div class="py-5 container" style="background-color: rgba(64, 64, 64, 0.5);">
-        <h2 class="mb-4" style="color: white;">How Does it Work</h2>
-        <!-- <p class="lead" style="color: white;">Collectively, we have:</p> -->
-         <p class="lead" style="color: white;">We offer a low key, sophisticated approach to dating in Galway. We prefer a 'less is more' environment devoid of OTT event trappings. Gone are the name-tags, shouting and tacky party trimmings. Meeting your special someone shouldn't be anything but a comfortable and relaxed experience. We create a private club atmosphere while recognizing our clients are also our product - we reward lovely daters with discounts and complimentary events and refuse service to anyone we don't think you'll fancy meeting. This is where being lovely has it's perks!</p>
-        <ol class="lead list-unstyled" style="color: white;">
-          <li>For our vanilla speed dating events:</li>
-          <li>- Choose an event, bully a friend into joining for emotional support and to share the delicious goss, then buy your tickets.</li>
-          <li>- Rock up on the night looking dazzling. Smart Casual is fine.</li>
-          <li>- Your host will direct the evening from there; short dates (often 5 minutes) with each of the 10-15 eligibles, with a break in the middle</a>.</li>
-          <li>- You'll mark on a custom card the names of any of the dates you'd like to connect with.</li>
-          <li>- If they feel the same way you'll be connected after the event.</li>
-        </ol>
+  <section id="services" class="py-5 bg-soft-pink text-center">
+    <div class="container centered-content">
+      <h2 class="section-heading">What We Do</h2>
+      <p class="lead">Our Galway-based event managers have got your back.</p>
+      <div class="check-list">
+        <div class="check-list-item"><i class="bi bi-check-circle-fill"></i> Speed Dating</div>
+        <div class="check-list-item"><i class="bi bi-check-circle-fill"></i> Singles Events</div>
+        <div class="check-list-item"><i class="bi bi-check-circle-fill"></i> Not Being on Apps</div>
+        <div class="check-list-item"><i class="bi bi-check-circle-fill"></i> Not Crying Into Your Tea While on Apps</div>
+        <div class="check-list-item"><i class="bi bi-check-circle-fill"></i> No D**k Pics, Maybe Some Duck Pics</div>
+        <div class="check-list-item"><i class="bi bi-check-circle-fill"></i> Supportive, Safe Environments</div>
+        <div class="check-list-item"><i class="bi bi-check-circle-fill"></i> Qualified, Attuned Hosts</div>
+        <div class="check-list-item"><i class="bi bi-check-circle-fill"></i> Romance, Romance, Romance</div>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
+  <section id="how" class="py-5 text-white" style="background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url('assets/images/experience.jpg') no-repeat center center / cover;">
+    <div class="container centered-content text-center">
+      <h2 class="text-center mb-4">How It Works</h2>
+      <p class="lead">We offer a low-key, sophisticated approach to dating in Galway. Gone are name-tags, tacky party trimmings and awkward shouting. This is about genuine connection — in a comfortable, private club-like atmosphere. Lovely daters get perks. Creeps get bounced.</p>
+      <ul class="lead list-unstyled mt-4 text-center">
+        <li>• Choose an event and bully a friend into coming for the support and delicious goss</li>
+        <li>• Buy tickets, rock up on the night looking dazzling (Smart Casual is fine)</li>
+        <li>• Survive 10+ rounds of short dates with fellow app-sufferers</li>
+        <li>• Mark down anyone you'd like to connect with</li>
+        <li>• If it’s mutual, we connect you after the event</li>
+      </ul>
+    </div>
+  </section>
+
   <section id="contact" class="py-5 text-center">
     <div class="container">
       <h2 class="mb-4">Contact Us</h2>
       <p class="lead">ian@fivedating.com</p>
-      <p class="lead" style="color: white;">ADMIN</p>
-      
-      <!-- Add contact form or contact information here -->
     </div>
   </section>
 
-  <!-- Bootstrap JS Bundle (including Popper) -->
+  <footer class="text-center py-3 bg-light">
+    <small>&copy; 2025 FIVE Dating. All rights reserved.</small>
+  </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </body>
 </html>
