@@ -31,6 +31,11 @@
       background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url('assets/images/kissingfish.jpg') no-repeat center center / cover;
       color: white;
     }
+    .how-section {
+      background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('assets/images/coolcat.jpg') center center / cover no-repeat;
+      color: white;
+      padding: 5rem 0;
+    }
     .card {
       border: none;
       border-radius: 1rem;
@@ -79,6 +84,13 @@
       color: #28a745;
       margin-top: 0.2rem;
     }
+    .spacer-divider {
+      margin-top: 5rem;
+      margin-bottom: 5rem;
+      height: 4px;
+      background: linear-gradient(to right, #fff3f7, #fffefc);
+      border: none;
+    }
   </style>
 </head>
 <body>
@@ -107,7 +119,16 @@
       <br>
       <p class="lead">Are the apps not working? Maybe you're unlovable</p>
       <p class="lead">Or maybe it's time to swipe in real life</p>
-      <a href="#services" class="btn btn-light btn-lg mt-4">Explore Events</a>
+      <a href="#subscribe" class="btn btn-light btn-lg mt-4">Join Our Mailing List</a>
+    </div>
+  </section>
+
+  <section id="events" class="py-5 text-center">
+    <div class="container centered-content">
+      <h2 class="section-heading">Upcoming Events</h2>
+      <div id="eventbrite-events">
+        <p class="lead">Loading upcoming events...</p>
+      </div>
     </div>
   </section>
 
@@ -124,15 +145,6 @@
         <div class="check-list-item"><i class="bi bi-check-circle-fill"></i> Supportive, Safe Environments</div>
         <div class="check-list-item"><i class="bi bi-check-circle-fill"></i> Qualified, Attuned Hosts</div>
         <div class="check-list-item"><i class="bi bi-check-circle-fill"></i> Romance, Romance, Romance</div>
-      </div>
-    </div>
-  </section>
-
-  <section id="events" class="py-5 text-center">
-    <div class="container centered-content">
-      <h2 class="section-heading">Upcoming Events</h2>
-      <div id="eventbrite-events">
-        <p class="lead">Loading upcoming events...</p>
       </div>
     </div>
   </section>
@@ -194,7 +206,7 @@
     </div>
   </section>
 
-  <section id="how" class="py-5 text-white" style="background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url('assets/images/experience.jpg') no-repeat center center / cover;">
+  <section id="how" class="how-section text-white">
     <div class="container centered-content text-center">
       <h2 class="text-center mb-4">How It Works</h2>
       <p class="lead">We offer a low-key, sophisticated approach to dating in Galway. Gone are name-tags, tacky party trimmings and awkward shouting. This is about genuine connection — in a comfortable, private club-like atmosphere. Lovely daters get perks. Creeps get bounced.</p>
@@ -211,7 +223,7 @@
   <section id="contact" class="py-5 text-center">
     <div class="container">
       <h2 class="mb-4">Contact Us</h2>
-      <p class="lead">ian@SillyGoosedating.com</p>
+      <p class="lead">team@sillygoosedating.com</p>
     </div>
   </section>
 
