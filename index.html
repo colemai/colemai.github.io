@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FIVE Dating</title>
+  <title>SillyGoose Dating</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
   <style>
     body {
       font-family: 'Inter', sans-serif;
@@ -26,7 +28,7 @@
     }
     .hero-section {
       height: 100vh;
-      background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url('assets/images/DNA_strand.jpg') no-repeat center center / cover;
+      background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url('assets/images/kissingfish.jpg') no-repeat center center / cover;
       color: white;
     }
     .card {
@@ -64,8 +66,6 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 1rem;
-      margin-left: 5rem;
-      margin-right: auto;
       text-align: left;
       padding-top: 3rem;
     }
@@ -84,7 +84,7 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
     <div class="container">
-      <a class="navbar-brand" href="#">FIVE Dating</a>
+      <a class="navbar-brand" href="#">SillyGoose Dating</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -92,7 +92,8 @@
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#team">Meet Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="#services">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">What We Do</a></li>
+          <li class="nav-item"><a class="nav-link" href="#subscribe">Mailing List</a></li>
           <li class="nav-item"><a class="nav-link" href="#how">How it Works</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
@@ -102,54 +103,11 @@
 
   <section id="home" class="hero-section d-flex align-items-center justify-content-center text-center">
     <div class="container">
-      <h1 class="display-4 fw-bold">FIVE Dating</h1>
-      <p class="lead">Are the apps not working? Maybe you're unlovable.</p>
-      <p class="lead">Or maybe it's time to swipe IRL.</p>
+      <h1 class="display-4 fw-bold">SillyGoose Dating</h1>
+      <br>
+      <p class="lead">Are the apps not working? Maybe you're unlovable</p>
+      <p class="lead">Or maybe it's time to swipe in real life</p>
       <a href="#services" class="btn btn-light btn-lg mt-4">Explore Events</a>
-    </div>
-  </section>
-
-  <section id="team" class="py-5">
-    <div class="container">
-      <h2 class="text-center section-heading">Meet Your Hosts</h2>
-      <div class="row g-4">
-        <div class="col-md-3">
-          <div class="card text-center">
-            <img src="assets/images/ian.jpg" class="card-img-top" alt="Ian">
-            <div class="card-body">
-              <h5 class="card-title">Ian Coleman</h5>
-              <p class="card-text">Compliance • Dating • Hosting</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card text-center">
-            <img src="assets/images/freya.jpg" class="card-img-top" alt="Freya">
-            <div class="card-body">
-              <h5 class="card-title">Freya</h5>
-              <p class="card-text">Romance • Compassion • Skeletons</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card text-center">
-            <img src="assets/images/ellie.jpg" class="card-img-top" alt="Ellie">
-            <div class="card-body">
-              <h5 class="card-title">Ellie</h5>
-              <p class="card-text">Soulmates • Psychology • PM</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card text-center">
-            <img src="assets/images/vlad.jpg" class="card-img-top" alt="Vlad">
-            <div class="card-body">
-              <h5 class="card-title">Vlad</h5>
-              <p class="card-text">Security • Relationships • Panache</p>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -166,6 +124,72 @@
         <div class="check-list-item"><i class="bi bi-check-circle-fill"></i> Supportive, Safe Environments</div>
         <div class="check-list-item"><i class="bi bi-check-circle-fill"></i> Qualified, Attuned Hosts</div>
         <div class="check-list-item"><i class="bi bi-check-circle-fill"></i> Romance, Romance, Romance</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="events" class="py-5 text-center">
+    <div class="container centered-content">
+      <h2 class="section-heading">Upcoming Events</h2>
+      <div id="eventbrite-events">
+        <p class="lead">Loading upcoming events...</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="team" class="py-5">
+    <div class="container">
+      <h2 class="text-center section-heading">Meet Your Hosts</h2>
+      <div class="row g-4">
+        <div class="col-md-3">
+          <div class="card text-center">
+            <img src="assets/images/ian.jpg" class="card-img-top" alt="Ian">
+            <div class="card-body">
+              <h5 class="card-title">Ian</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card text-center">
+            <img src="assets/images/freya.jpg" class="card-img-top" alt="Freya">
+            <div class="card-body">
+              <h5 class="card-title">Freya</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card text-center">
+            <img src="assets/images/ellie.jpg" class="card-img-top" alt="Ellie">
+            <div class="card-body">
+              <h5 class="card-title">Ellie</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card text-center">
+            <img src="assets/images/vlad.jpg" class="card-img-top" alt="Vlad">
+            <div class="card-body">
+              <h5 class="card-title">Vlad</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="subscribe" class="py-5 text-center bg-light">
+    <div class="container centered-content">
+      <h2 class="section-heading">Join Our Mailing List</h2>
+      <p class="lead">Get event updates, early access tickets, and romantic nonsense in your inbox.</p>
+      <div id="sib-container" class="sib-container--large sib-container--vertical" style="margin: 0 auto; max-width: 540px; background-color: white; border-radius: 0.5rem; border: 1px solid #ccc; padding: 2rem;">
+        <form id="sib-form" method="POST" action="https://cea41215.sibforms.com/serve/MUIFAK9P7nNTBDFvypCqbOAe9o1AJjaM2hN-6E47HzUoXXbB69bRZMjNi9J8PLE65xO-6Shvdb0Fat5A3I_ARwBNxTycdI3JD-JcadFqhOH97aMr7h4Fd6VsMF9Ogt4oQ9epYKOgG1n8N5UY9dMLMkeXQSqF-NddG1cZu7-diB-Sx6dvMRrQBV4gNousp2Mwj3OsurIfdGOtdeYR" data-type="subscription">
+          <div class="mb-3 text-start">
+            <label for="EMAIL" class="form-label fw-bold">Enter your email address</label>
+            <input type="email" class="form-control" id="EMAIL" name="EMAIL" required placeholder="you@example.com">
+            <div class="form-text">No spam. Just awkward banter and exclusive invites.</div>
+          </div>
+          <button type="submit" class="btn btn-dark w-100">Join Mailing List</button>
+        </form>
       </div>
     </div>
   </section>
@@ -187,14 +211,39 @@
   <section id="contact" class="py-5 text-center">
     <div class="container">
       <h2 class="mb-4">Contact Us</h2>
-      <p class="lead">ian@fivedating.com</p>
+      <p class="lead">ian@SillyGoosedating.com</p>
     </div>
   </section>
 
   <footer class="text-center py-3 bg-light">
-    <small>&copy; 2025 FIVE Dating. All rights reserved.</small>
+    <small>&copy; 2025 SillyGoose Dating. All rights reserved.</small>
   </footer>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <script>
+    const container = document.getElementById('eventbrite-events');
+    fetch('https://www.eventbriteapi.com/v3/organizations/113677292581/events/?status=live', {
+      headers: {
+        'Authorization': 'Bearer TokenHere' // Replace with your actual Eventbrite API token
+      }
+    })
+    .then(res => res.json())
+    .then(data => {
+      if (data.events && data.events.length > 0) {
+        container.innerHTML = data.events.map(event => `
+          <div class="my-4">
+            <h5>${event.name.text}</h5>
+            <p>${new Date(event.start.local).toLocaleString()}</p>
+            <a href="${event.url}" class="btn btn-primary" target="_blank">Get Tickets</a>
+          </div>
+        `).join('');
+      } else {
+        container.innerHTML = `<p class="lead">No upcoming events right now — <a href="#subscribe">join our mailing list</a> to stay in the loop!</p>`;
+      }
+    })
+    .catch(() => {
+      container.innerHTML = `<p class="lead">Could not load events. Please check back later.</p>`;
+    });
+  </script>
 </body>
 </html>
