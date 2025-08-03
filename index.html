@@ -36,8 +36,13 @@
       gap: 0.5rem;
     }
     .navbar-brand img {
-      height: 32px;
+      height: 48px;
       width: auto;
+    }
+    @media (max-width: 576px) {
+      .navbar-brand img {
+        height: 36px;
+      }
     }
     a.nav-link:hover, a.nav-link.active {
       color: var(--primary-accent);
